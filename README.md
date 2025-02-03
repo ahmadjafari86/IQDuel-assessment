@@ -11,14 +11,15 @@ IQDuel is a web platform for managing online gaming leagues, tournaments, and pl
 ### Prerequisites
 
 - Python 3.10.12
+- git 2.34.1
 
 ### Installation
 
 1.  **Clone the repository:**
 
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://www.google.com/search?q=https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)  # Replace with your repo URL
-    cd league_management  # Go to the project directory
+    git clone https://github.com/ahmadjafari86/IQDuel-assessment.git
+    cd IQDuel-assessment  # Go to the project directory
     ```
 
 2.  **Create a virtual environment (recommended):**
