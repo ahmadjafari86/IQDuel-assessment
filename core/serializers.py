@@ -16,5 +16,5 @@ class PlayerSerializer(serializers.ModelSerializer):
 class MatchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Match
-        fields = ['id', 'league', 'player1', 'player2']
+        fields = ['id', 'league', 'player1', 'player2', 'score1', 'score2']
         depth = 1 

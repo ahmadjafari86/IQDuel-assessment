@@ -14,5 +14,5 @@ class PlayerAdmin(admin.ModelAdmin):
 
 @admin.register(Match)
 class MatchAdmin(admin.ModelAdmin):
-    list_display = ('id', 'league', 'player1', 'player2')
+    list_display = ('id', 'league', 'player1', 'player2', 'score1', 'score2')
     list_filter = ('league',)

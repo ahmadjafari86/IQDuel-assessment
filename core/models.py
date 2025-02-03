@@ -29,6 +29,8 @@ class Match(models.Model):
     league = models.ForeignKey(League, on_delete=models.CASCADE, related_name='matches')
     player1 = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='matches_as_player1')
     player2 = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='matches_as_player2')
+    score1 = models.PositiveIntegerField(default=0)
+    score2 = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return f"Match in {self.league.name} ({self.player1} vs {self.player2})"
