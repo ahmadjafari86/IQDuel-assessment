@@ -1,31 +1,18 @@
-# League Management and Matchmaking System
+# IQDuel Assessment
 
-This project implements a backend service for managing leagues and performing matchmaking between players in online games. It provides RESTful APIs for creating leagues, registering players, performing matchmaking, and retrieving match information. Optionally, it also includes WebSocket support for live match updates.
+Welcome to IQDuel Assessment! This repository contains my django backend assessment for IQDuel Company
 
-## Features
+## Project Overview
 
-- **League Management:**
-  - Create a league with a name and a maximum number of players.
-  - Retrieve league details.
-  - (Optional) Update/Delete Leagues.
-- **Player Registration:**
-  - Register a player in a specific league.
-- **Matchmaking:**
-  - Perform matchmaking between players in a league by randomly placing them into two-player groups. Handles odd numbers of players.
-- **Match Retrieval:**
-  - Retrieve a list of matches for a specific league.
-- **(Optional) Live Match Updates:**
-  - Use WebSockets to receive live match updates.
+IQDuel is a web platform for managing online gaming leagues, tournaments, and player competitions, providing essential tools for competitive gaming organization and statistics tracking.
 
-## Technologies Used
+## Getting Started
 
-- Python
-- Django
-- Django REST Framework
-- Channels (for WebSockets)
-- PostgreSQL (recommended - or any database supported by Django)
+### Prerequisites
 
-## Installation
+- Python 3.10.12
+
+### Installation
 
 1.  **Clone the repository:**
 
@@ -44,37 +31,17 @@ This project implements a backend service for managing leagues and performing ma
 3.  **Install dependencies:**
 
     ```bash
-    pip install -r requirements.txt  # If you create a requirements file (recommended)
-    # or
-    pip install django djangorestframework channels daphne
+    pip install -r requirements.txt
     ```
 
-4.  **Configure Database:**
-
-    - Set up your PostgreSQL (or other) database.
-    - Update the database settings in `league_management/league_management/settings.py`:
-
-      ```python
-      DATABASES = {
-          'default': {
-              'ENGINE': 'django.db.backends.postgresql',  # Or your database engine
-              'NAME': 'your_database_name',
-              'USER': 'your_database_user',
-              'PASSWORD': 'your_database_password',
-              'HOST': 'localhost',
-              'PORT': '5432',
-          }
-      }
-      ```
-
-5.  **Run Migrations:**
+4.  **Run Migrations:**
 
     ```bash
     python manage.py makemigrations
     python manage.py migrate
     ```
 
-6.  **(Optional) Create Superuser:**
+5.  **(Optional) Create Superuser:**
 
     ```bash
     python manage.py createsuperuser
@@ -117,11 +84,7 @@ This project implements a backend service for managing leagues and performing ma
 
 ## WebSocket Endpoint
 
-- `ws://your-server-address/ws/league/{league_id}/`: For live match updates.
-
-## Testing
-
-You can use tools like Postman or `curl` to test the API endpoints. The included example JavaScript code demonstrates how to connect to the WebSocket endpoint.
+- `ws://localhost:8000/ws/league/<league-id>/`: For live match updates
 
 ## Author
 
@@ -129,4 +92,4 @@ YOUR_NAME
 
 ## License
 
-MIT (or your preferred license)
+This project is licensed under the [LICENSE NAME] - see the [LICENSE.md](LICENSE.md) file for details.
